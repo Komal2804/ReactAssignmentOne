@@ -1,14 +1,16 @@
 import "./App.css";
-import UserDetailsComp from "./AppComponent/UserDetailsComp";
+import ImageComp from "./AppComponent/ImageComp";
 
+import UserDetailsComp from "./AppComponent/UserDetailsComp";
 function App() {
   
   return (
     <div className="App">
-      <UserDetailsComp/>
+     <UserDetailsComp/>
      
+     <ImageComp/>
     </div>
   );
-}
+};
 
 export default App;
