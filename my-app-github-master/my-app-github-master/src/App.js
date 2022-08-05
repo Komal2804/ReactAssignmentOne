@@ -1,14 +1,14 @@
 import "./App.css";
 import ImageComp from "./AppComponent/ImageComp";
+import ListComp from "./AppComponent/ListComp";
 
 import UserDetailsComp from "./AppComponent/UserDetailsComp";
 function App() {
   
   return (
     <div className="App">
-     <UserDetailsComp/>
-     
-     
+    {/* <ImageComp/> */}
+    <UserDetailsComp/>
     </div>
   );
 };

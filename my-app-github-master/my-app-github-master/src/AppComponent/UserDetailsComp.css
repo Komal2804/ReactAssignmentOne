@@ -1,0 +1,38 @@
+
+    
+    table {
+    border-collapse: collapse;
+    border: 2px solid forestgreen;
+    width: 800px;
+    height: 200px;
+    align-content:flex-start;
+    margin-left: 450px;
+    margin-top: 0em;
+    
+    }
+   
+    td {
+    text-align:left;
+    margin-top: 20px;
+    
+    }
+    .userdata{
+        
+        margin: 20px;
+        padding: 0 10px 0 10px;
+        width: 500px;
+        
+        
+    }
+    .spinner {
+        width: 40px;
+        height: 40px;
+        background-color: #333;
+      
+        margin: 100px auto;
+        -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+        animation: sk-rotateplane 1.2s infinite ease-in-out;
+      }
+      
+     
+  
