@@ -1,7 +1,6 @@
 import "./App.css";
-import DemoComp from "./AppComponent/DemoComp";
-import ImageComp from "./AppComponent/ImageComp";
-import ListComp from "./AppComponent/ListComp";
+import { Link } from "react-router-dom";
+
 
 import UserDetailsComp from "./AppComponent/UserDetailsComp";
 function App() {
@@ -9,6 +8,9 @@ function App() {
   return (
     <div className="App">
     <UserDetailsComp/>
+    <nav>
+      <Link to="/EditComp">Edit Details</Link>
+    </nav>
     
     </div>
   );
