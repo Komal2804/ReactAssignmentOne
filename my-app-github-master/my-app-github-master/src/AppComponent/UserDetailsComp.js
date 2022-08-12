@@ -11,8 +11,10 @@ function UserDetailsComp() {
     axios.get("https://jsonplaceholder.typicode.com/users")
       .then((response) => {
         setUser(response.data);
+        
 
       })
+      
   }, [])
 
   return (
