@@ -1,12 +1,13 @@
 import React from 'react';
 import "./UserDetailsComp.css";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function PerticularUserComp(props) {
-    const Navigate =useNavigate();
+    const navigate = useNavigate();
     const onEdit = (event, props) => {
-       // console.log(props);
-        props.history.push("/EditComp/" + props)
-Navigate('/EditComp', {state:{user:props}});
+        // console.log(props);
+        // props.history.push("/EditComp/" + props)
+        navigate('/EditComp', { state: { user: props } });
+        
     }
     return (
         <div className='container'>
@@ -30,7 +31,8 @@ Navigate('/EditComp', {state:{user:props}});
                         <tr> <td>Address: {props.address.street},{props.address.suite},{props.address.city},{props.address.zipcode}</td></tr>
                     </td>
                     <td><button onClick={(e) => onEdit(e, props)}>Edit</button>
-                    </td> </tr>
+                    </td> 
+                    </tr>
             </table>
         </div>
     )
