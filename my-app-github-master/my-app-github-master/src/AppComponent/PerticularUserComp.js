@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./UserDetailsComp.css";
 import { useNavigate } from "react-router-dom";
 function PerticularUserComp(props) {
     const navigate = useNavigate();
+    
     const onEdit = (event, props) => {
         // console.log(props);
-        // props.history.push("/EditComp/" + props)
+        
         navigate('/EditComp', { state: { user: props } });
+        
+    }
+    const onDelete=()=>{
         
     }
     return (
@@ -20,18 +24,19 @@ function PerticularUserComp(props) {
                     <td>
                         <tr><th> {props.name}</th></tr>
 
-                        <tr> <td>Email: {props.email}</td></tr>
+                        <tr> <td><b>Email:</b> {props.email}</td></tr>
 
-                        <tr> <td>Phone: {props.phone}</td></tr>
+                        <tr> <td><b>Phone:</b> {props.phone}</td></tr>
 
-                        <tr> <td>Company: {props.company.name}</td></tr>
+                        <tr> <td><b>Company:</b> {props.company.name}</td></tr>
 
-                        <tr> <td>Website: {props.website}</td></tr>
+                        <tr> <td><b>Website:</b> {props.website}</td></tr>
 
-                        <tr> <td>Address: {props.address.street},{props.address.suite},{props.address.city},{props.address.zipcode}</td></tr>
+                        <tr> <td><b>Address:</b> {props.address.street},{props.address.suite},{props.address.city},{props.address.zipcode}</td></tr>
                     </td>
                     <td><button onClick={(e) => onEdit(e, props)}>Edit</button>
                     </td> 
+                    <td><button onclick={onDelete}>Delete</button> </td>
                     </tr>
             </table>
         </div>
