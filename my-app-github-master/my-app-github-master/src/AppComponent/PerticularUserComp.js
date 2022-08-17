@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./UserDetailsComp.css";
+import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 function PerticularUserComp(props) {
     const navigate = useNavigate();
@@ -11,7 +12,11 @@ function PerticularUserComp(props) {
         
     }
     const onDelete=()=>{
-        
+        axios.delete(`https://jsonplaceholder.typicode.com/users/${this.state.id}`)
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      }) 
     }
     return (
         <div className='container'>
