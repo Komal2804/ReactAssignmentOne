@@ -3,19 +3,20 @@ import axios from 'axios'
 import "./UserDetailsComp.css"
 import PerticularUserComp from './PerticularUserComp';
 
-
-function UserDetailsComp() {  
+function UserDetailsComp(props) {
   const [user, setUser] = useState([]);
-
+ // props.callback("Ojassoft");
+// console.log(props.callback);
   useEffect(() => {
     axios.get("https://jsonplaceholder.typicode.com/users")
       .then((response) => {
         setUser(response.data);
-        
+
 
       })
-      
+
   }, [])
+  
 
   return (
     <>
@@ -32,6 +33,8 @@ function UserDetailsComp() {
                 website={value.website}
                 address={value.address}
                 url={url}
+                key={value.id}
+                callback={props.callback}
               />
             )
           })}

@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 function PerticularUserComp(props) {
     const navigate = useNavigate();
-    
+    props.callback("Ojassoft");
     const onEdit = (event, props) => {
         // console.log(props);
         

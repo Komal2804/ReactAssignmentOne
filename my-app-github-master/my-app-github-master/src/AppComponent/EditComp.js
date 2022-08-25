@@ -14,36 +14,9 @@ function EditComp(props) {
   const location = useLocation();
   //console.log(location.state.user);
   const onUpdate = (e) => {
-    // e.preventDefault();
-    // const users = {
-    //   value: props
-    //   //  name: location.state.user.name,
-    //   //  email:location.state.user.email,
-    //   //  phone:location.state.user.phone,
-    //   //  company:location.state.user.company.name,
-    //   //  website:location.state.user.website,
-    //   //  address:location.state.user.address.street
-    // }
-    // axios.put('https://jsonplaceholder.typicode.com/users', users)
-    //   .then(res => console.log(res.data));
-    // // .then(res=>this.setState({updatedAt: res.data.updatedAt}));
-
     let item = { name, email, phone, company, website };
-    console.log("item", item);
-    // fetch('https://jsonplaceholder.typicode.com/users/${userId}',{
-    //   method:'PUT',
-
-    //   }).then((result)=>{
-    //     result.json().then((resp)=>{
-    //       console.log(resp)
-
-    //     })
-    //   })
-    axios.put('https://jsonplaceholder.typicode.com/users/${userId}')
-
-      .then(res => this.setState({ updatedAt: res.data.updatedAt }));
-
-
+   // console.log("item", item);
+    props.func(item);
   }
 
   return (
